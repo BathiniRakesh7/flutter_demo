@@ -18,6 +18,10 @@ class MyWidget extends StatelessWidget {
           title: const Center(
             child: Text('Flutter'),
           ),
+          actions: const [
+            Icon(Icons.search),
+            Padding(padding: EdgeInsets.all(10)),
+          ],
           backgroundColor: const Color.fromARGB(255, 250, 146, 37),
         ),
         drawer: Drawer(
@@ -38,6 +42,34 @@ class MyWidget extends StatelessWidget {
                     ),
                   ),
                 ),
+                decoration: BoxDecoration(
+                  image: DecorationImage(
+                    image: NetworkImage(
+                      'https://tse1.mm.bing.net/th?id=OIP.2HIX184r17IvA1VRuXdtbAHaFL&pid=Api&P=0&h=180',
+                    ),
+                    fit: BoxFit.cover,
+                  ),
+                ),
+              ),
+              ListTile(
+                leading: Icon(Icons.login),
+                title: Text('Login'),
+              ),
+              ListTile(
+                leading: Icon(Icons.people),
+                title: Text('Friends'),
+              ),
+              ListTile(
+                leading: Icon(Icons.my_library_add_outlined),
+                title: Text('My Account'),
+              ),
+              ListTile(
+                leading: Icon(Icons.share),
+                title: Text('Share'),
+              ),
+              ListTile(
+                leading: Icon(Icons.perm_device_information_rounded),
+                title: Text('About'),
               ),
             ],
           ),
