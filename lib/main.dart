@@ -56,12 +56,16 @@ class MyWidget extends StatelessWidget {
                 title: Text('Login'),
               ),
               ListTile(
+                leading: Icon(Icons.my_library_add_outlined),
+                title: Text('My Account'),
+              ),
+              ListTile(
                 leading: Icon(Icons.people),
                 title: Text('Friends'),
               ),
               ListTile(
-                leading: Icon(Icons.my_library_add_outlined),
-                title: Text('My Account'),
+                leading: Icon(Icons.favorite),
+                title: Text('Favorites'),
               ),
               ListTile(
                 leading: Icon(Icons.share),
@@ -110,7 +114,7 @@ class MyWidget extends StatelessWidget {
           animationDuration: const Duration(milliseconds: 300),
           items: const [
             Icon(Icons.home, color: Colors.white),
-            Icon(Icons.favorite, color: Colors.white),
+            Icon(Icons.notifications_rounded, color: Colors.white),
             Icon(Icons.settings, color: Colors.white),
             //Icon(Icons.search),
           ],
