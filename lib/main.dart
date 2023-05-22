@@ -113,9 +113,10 @@ class MyWidget extends StatelessWidget {
           color: Colors.amber,
           animationDuration: const Duration(milliseconds: 300),
           items: const [
+            Icon(Icons.account_circle_rounded, color: Colors.white),
             Icon(Icons.home, color: Colors.white),
-            Icon(Icons.notifications_rounded, color: Colors.white),
             Icon(Icons.settings, color: Colors.white),
+            Icon(Icons.notifications, color: Colors.white),
             //Icon(Icons.search),
           ],
         ),
