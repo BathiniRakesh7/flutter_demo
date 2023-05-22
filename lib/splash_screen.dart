@@ -29,9 +29,18 @@ class _SplashscreenState extends State<Splashscreen> {
               begin: Alignment.topRight,
               end: Alignment.bottomRight,
               colors: [
-                Colors.deepPurpleAccent,
-                Colors.deepPurple,
+                Colors.white,
+                Color.fromARGB(230, 12, 30, 210),
               ],
+          ),
+        ),
+        child: Center(
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.center,
+            mainAxisAlignment: MainAxisAlignment.spaceAround,
+            children: [
+              Image.asset('images/Cerone.jpg',height: 200,width: 200,),
+            ],
           ),
         ),
       ),
