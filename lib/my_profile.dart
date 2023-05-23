@@ -5,13 +5,13 @@ void main() {
     const MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'My Profile',
-      home: LoginPage(),
+      home: MyProfile(),
     ),
   );
 }
 
-class LoginPage extends StatelessWidget {
-  const LoginPage({Key? key}) : super(key: key);
+class MyProfile extends StatelessWidget {
+  const MyProfile({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {

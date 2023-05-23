@@ -1,5 +1,6 @@
 import 'package:curved_navigation_bar/curved_navigation_bar.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_demo/pie_chart_disc.dart';
 
 void main() {
   runApp(const MyWidget());
@@ -112,7 +113,7 @@ class MyWidget extends StatelessWidget {
           backgroundColor: Colors.deepPurpleAccent,
           color: Colors.amber,
           animationDuration: const Duration(milliseconds: 300),
-          items: const [
+          items: const[
             Icon(Icons.account_circle_rounded, color: Colors.white),
             Icon(Icons.home, color: Colors.white),
             Icon(Icons.settings, color: Colors.white),
@@ -122,5 +123,6 @@ class MyWidget extends StatelessWidget {
         ),
       ),
     );
+
   }
 }

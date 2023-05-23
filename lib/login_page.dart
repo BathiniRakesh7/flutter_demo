@@ -92,12 +92,3 @@ class LoginPage extends StatelessWidget {
   }
 }
 
-//
-// floatingActionButtonLocation: FloatingActionButtonLocation.endFloat,
-// floatingActionButton: FloatingActionButton(
-// onPressed: () {
-// Navigator.push(context,
-// MaterialPageRoute(builder: (context) => const MyWidget()));
-// },
-// child: const Icon(Icons.send),
-// ),
