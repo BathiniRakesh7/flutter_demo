@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:syncfusion_flutter_charts/charts.dart';
+
 void main() {
   runApp(
     const MaterialApp(
@@ -19,41 +20,56 @@ class LineChart extends StatefulWidget {
 
 class _LineChartState extends State<LineChart> {
   late List<StocksData> _ChartData;
+  late TooltipBehavior _tooltipBehavior;
+
   @override
   void initState() {
-    // TODO: implement initState
-    _ChartData= getChartData();
+    _ChartData = getChartData();
+    _tooltipBehavior = TooltipBehavior(enable: true);
     super.initState();
   }
 
   @override
   Widget build(BuildContext context) {
-    return SafeArea(child: Scaffold(
-    body: SfCartesianChart(series: <ChartSeries>[
-      LineSeries<StocksData,double>(dataSource:_ChartData,
-      xValueMapper: (StocksData stocks,_)=>stocks.month,
-        yValueMapper: (StocksData stocks,_)=>stocks.stocks)
-    ],
-    primaryXAxis: NumericAxis(edgeLabelPlacement: EdgeLabelPlacement.shift),
-     ),));
-
+    return Scaffold(
+        body: SafeArea(
+      child: SfCartesianChart(
+        title: ChartTitle(
+            text: 'Stocks Data', textStyle: const TextStyle(fontSize: 35)),
+        margin: const EdgeInsets.all(150),
+        tooltipBehavior: _tooltipBehavior,
+        series: <SplineSeries>[
+          SplineSeries<StocksData, double>(
+              dataSource: _ChartData,
+              xValueMapper: (StocksData month, _) => month.month,
+              yValueMapper: (StocksData stocks, _) => stocks.stocks,
+              dataLabelSettings: const DataLabelSettings(isVisible: true),
+              enableTooltip: true,
+              color: Colors.yellow,
+              width: 4,
+              opacity: 1),
+        ],
+        primaryXAxis: NumericAxis(edgeLabelPlacement: EdgeLabelPlacement.shift),
+      ),
+    ));
   }
-  List<StocksData>getChartData(){
-    final List<StocksData> ChartData=[
-      StocksData(1, 50),
-      StocksData(2, 30),
-      StocksData(3, 20),
-      StocksData(4, 70),
-      StocksData(5, 90),
-      StocksData(6, 110),
+
+  List<StocksData> getChartData() {
+    final List<StocksData> ChartData = [
+      StocksData(01, 50),
+      StocksData(02, 30),
+      StocksData(03, 20),
+      StocksData(04, 70),
+      StocksData(05, 90),
+      StocksData(06, 110),
     ];
     return ChartData;
   }
 }
 
-class StocksData{
-  StocksData(this.month,this.stocks);
+class StocksData {
+  StocksData(this.month, this.stocks);
+
   final double month;
   final double stocks;
-
 }
