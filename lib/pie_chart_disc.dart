@@ -20,7 +20,6 @@ class _PiechartDisc extends State<PiechartDisc> {
   @override
   Widget build(BuildContext context) {
     return    Scaffold(
-      backgroundColor: Colors.grey.shade300,
       body: const SafeArea(
         child: PieChart(
 

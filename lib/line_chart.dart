@@ -32,7 +32,6 @@ class _LineChartState extends State<LineChart> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.grey.shade300,
         body: SafeArea(
       child: SfCartesianChart(
         title: ChartTitle(

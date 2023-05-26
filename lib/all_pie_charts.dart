@@ -24,100 +24,84 @@ class _HomePage1State extends State<HomePage1> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.grey[300],
-      // appBar: AppBar(
-      //   title: const Text('Charts'),
-
-      body: SingleChildScrollView(
-        scrollDirection: Axis.horizontal,
-        child: SafeArea(
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.start,
-            children: [
-              Row(
+      backgroundColor: Colors.grey[200],
+      body: SafeArea(
+            child: SingleChildScrollView(
+              scrollDirection: Axis.vertical,
+              child: Column(
                 mainAxisAlignment: MainAxisAlignment.start,
+                crossAxisAlignment: CrossAxisAlignment.stretch,
                 children: [
-                  Container(
-                    height: 350,
-                    width: 400,
-                    margin: const EdgeInsets.all(40),
-                    padding: const EdgeInsets.all(50),
-                    decoration: BoxDecoration(
-                        color: Colors.grey[300],
-                        borderRadius: BorderRadius.circular(15),
-                        boxShadow: [
-                          BoxShadow(
-                            color: Colors.grey.shade600,
-                            offset: const Offset(-2, -2),
-                            blurRadius: 10,
-                            spreadRadius: 1,
-                          ),
-                          const BoxShadow(
-                            color: Colors.white,
-                            offset: Offset(-2, -2),
-                            blurRadius: 10,
-                            spreadRadius: 1,
-                          ),
-                        ]
-                    ),
-                    child: PiechartDisc(),
+                  Row(
+                    // mainAxisAlignment: MainAxisAlignment.start,
+                    children: [
+                      Container(
+                        height: 350,
+                        width: 400,
+                        margin: const EdgeInsets.all(5),
+                        padding: const EdgeInsets.all(20),
+                        decoration: BoxDecoration(
+                          color: Colors.white,
+                          borderRadius: BorderRadius.circular(30),
+                        ),
+                        child: PiechartDisc(),
+                      ),
+                      Container(
+                        height: 350,
+                        width: 400,
+                        margin: const EdgeInsets.all(5),
+                        padding: const EdgeInsets.all(20),
+                        decoration: BoxDecoration(
+                          color: Colors.white,
+                          borderRadius: BorderRadius.circular(30),
+                        ),
+                        child: const HomePage(),
+                      ),
+                      Container(
+                        height: 350,
+                        width: 400,
+                        margin: const EdgeInsets.all(5),
+                        padding: const EdgeInsets.all(20),
+                        decoration: BoxDecoration(
+                          color: Colors.white,
+                          borderRadius: BorderRadius.circular(15),
+                        ),
+                        child: const HomePage(),
+                      ),
+                    ],
                   ),
-                  Container(
-                    height: 350,
-                    width: 400,
-                    margin: const EdgeInsets.all(40),
-                    padding: const EdgeInsets.all(50),
-                    decoration: BoxDecoration(
-                        color: Colors.grey[300],
-                        borderRadius: BorderRadius.circular(15),
-                        boxShadow: [
-                          BoxShadow(
-                            color: Colors.grey.shade600,
-                            offset: const Offset(-2, -2),
-                            blurRadius: 10,
-                            spreadRadius: 1,
-                          ),
-                          const BoxShadow(
-                            color: Colors.white,
-                            offset: Offset(-2, -2),
-                            blurRadius: 10,
-                            spreadRadius: 1,
-                          ),
-                        ]
-                    ),
-                    child: HomePage(),
+                  Row(
+                    children: [
+                      Container(
+                        height: 350,
+                        width: 400,
+                        margin: const EdgeInsets.all(5),
+                        padding: const EdgeInsets.all(20),
+                        decoration: BoxDecoration(
+                          color: Colors.white,
+                          borderRadius: BorderRadius.circular(30),
+                        ),
+                        child: const HomePage(),
+                      ),
+                      Container(
+
+                        height: 350,
+                        width: 700,
+                        margin: const EdgeInsets.all(5),
+                        padding: const EdgeInsets.all(20),
+                        decoration: BoxDecoration(
+                          color: Colors.white,
+                          borderRadius: BorderRadius.circular(30),
+                        ),
+                        child: const LineChart(),
+                      ),
+
+                    ],
                   ),
                 ],
               ),
-          Container(
-            height: 400,
-            width: 400,
-            margin: const EdgeInsets.all(40),
-            padding: const EdgeInsets.all(50),
-            decoration: BoxDecoration(
-                color: Colors.grey[300],
-                borderRadius: BorderRadius.circular(15),
-                boxShadow: [
-                  BoxShadow(
-                    color: Colors.grey.shade600,
-                    offset: const Offset(-2, -2),
-                    blurRadius: 10,
-                    spreadRadius: 1,
-                  ),
-                  const BoxShadow(
-                    color: Colors.white,
-                    offset: Offset(-2, -2),
-                    blurRadius: 10,
-                    spreadRadius: 1,
-                  ),
-                ]
             ),
-            child: LineChart(),
           ),
-            ],
-          ),
-        ),
-      ),
-    );
+      );
   }
 }
