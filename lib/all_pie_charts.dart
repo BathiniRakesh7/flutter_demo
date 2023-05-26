@@ -29,13 +29,13 @@ class _HomePageState extends State<HomePage> {
       body:Row(
         children: [
           const SizedBox(
-            height: 1000,
-            width: 700,
+            height: 800,
+            width: 600,
             child: LineChart(),
           ),
           SizedBox(
-            height: 1000,
-            width: 700,
+            height: 700,
+            width: 600,
             child: PiechartDisc(),
           )
 

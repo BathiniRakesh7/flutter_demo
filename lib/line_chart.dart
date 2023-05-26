@@ -36,7 +36,7 @@ class _LineChartState extends State<LineChart> {
       child: SfCartesianChart(
         title: ChartTitle(
             text: 'Stocks Data', textStyle: const TextStyle(fontSize: 35)),
-        margin: const EdgeInsets.all(150),
+        margin: const EdgeInsets.symmetric(vertical: 30),
         tooltipBehavior: _tooltipBehavior,
         series: <SplineSeries>[
           SplineSeries<StocksData, double>(

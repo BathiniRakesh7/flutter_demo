@@ -1,15 +1,15 @@
 
 import 'package:flutter/material.dart';
 import 'package:pie_chart/pie_chart.dart';
-// void main() {
-//   runApp(
-//     MaterialApp(
-//       debugShowCheckedModeBanner: false,
-//       title: 'Pie Chart',
-//       home: PiechartDisc(),
-//     ),
-//   );
-// }
+void main() {
+  runApp(
+    MaterialApp(
+      debugShowCheckedModeBanner: false,
+      title: 'Pie Chart',
+      home: PiechartDisc(),
+    ),
+  );
+}
 
 class PiechartDisc extends StatefulWidget {
   @override
