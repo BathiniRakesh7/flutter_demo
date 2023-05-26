@@ -19,29 +19,25 @@ class PiechartDisc extends StatefulWidget {
 class _PiechartDisc extends State<PiechartDisc> {
   @override
   Widget build(BuildContext context) {
-    return  const Scaffold(
-      // appBar: AppBar(
-      //   title: const Text("Pie Chart"),
-      // ),
-      body: SafeArea(
+    return    Scaffold(
+      backgroundColor: Colors.grey.shade300,
+      body: const SafeArea(
         child: PieChart(
+
               dataMap: {
                 "Low": 10,
                 "Medium": 14,
                 "High": 7,
               },
-              chartRadius: 300,
               chartType: ChartType.ring,
-              ringStrokeWidth: 50,
+              ringStrokeWidth: 20,
               chartValuesOptions: ChartValuesOptions(
-                  chartValueStyle: TextStyle(
-                      fontSize: 20, fontWeight: FontWeight.bold, color: Colors.black),
                   showChartValueBackground: false),
 
               legendOptions:LegendOptions(
                   legendTextStyle:
-                      TextStyle(fontWeight: FontWeight.bold, fontSize: 20),
-                  legendPosition: LegendPosition.bottom,
+                      TextStyle(fontWeight: FontWeight.bold, fontSize: 15),
+                  legendPosition: LegendPosition.right,
                   showLegends: true),
               animationDuration: Duration(seconds: 2),
               gradientList: <List<Color>>[

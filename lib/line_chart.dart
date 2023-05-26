@@ -32,11 +32,12 @@ class _LineChartState extends State<LineChart> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.grey.shade300,
         body: SafeArea(
       child: SfCartesianChart(
         title: ChartTitle(
-            text: 'Stocks Data', textStyle: const TextStyle(fontSize: 35)),
-        margin: const EdgeInsets.symmetric(vertical: 30),
+            text: 'Stocks Data', textStyle: const TextStyle(fontSize: 15)),
+        // margin: const EdgeInsets.symmetric(vertical: 30),
         tooltipBehavior: _tooltipBehavior,
         series: <SplineSeries>[
           SplineSeries<StocksData, double>(
